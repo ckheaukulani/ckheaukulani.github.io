@@ -14,97 +14,7 @@ body, div, h1, h2, h3, p, ul, ol, li, img {
     border: 0;
 }
 
-li {
-    list-style-type: none;
-}
-
-body {
-    background:fff;
-    font-family: Sans-Serif;
-    height:100%;
-    font-size:.875em;
-}
-
-#menu-container {
-    margin: 0 auto;
-    width: 600px;
-    font-size:1em;
-}
-
-#container {
-    margin: 0 auto;
-    width: 600px;
-    background: #fff;
-    /* -mox-box-shadow: 0 0 5px #DDDDD0; */
-    /* -webkit-box-shadow: 0 0 5px #DDDDD0; */
-    /* box-shadow: 0 0 5px #EEEEE0; */
-    padding: 0 20px 0px 20px;
-    min-height:100%;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: auto 1fr; /* Auto size for image, remaining space for text */
-    gap: 70px; /* Space between image and text */
-    margin-bottom: 25px; /* Adjust the value as needed */
-}
-
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column; /* For Flexbox */
-        /* grid-template-columns: 1fr; For Grid */
-    }
-}
-
-/* .photo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-} */
-
-.author__container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 5px;
-}
-
-.author__icons {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.author__text {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    /* justify-content: flex-end; /* Aligns content to the bottom */
-}
-
-.author__avatar {
-    display: flex; 
-    flex-direction: column;
-    align-items: start; 
-    /* vertical-align: top;  */
-    width: 175px;
-    height: 175px;
-    border-radius: 50%; /* This creates the circular shape */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-    border: 2px solid #fff; /* Optional: Adds a border around the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
-}
-
-hname {
-    font-family:inherit;
-    font-weight:normal;
-    font-size:1.5em; 
-    color:#555; 
-    font-variant:normal;
-    /* margin: 40px 0 5px 0; */
-    padding-top: 20px;
-    /* padding-top: 20px; */
-    /* padding-bottom: 5px; */
-}
+/* fonts, styles, lists */
 
 a {
     text-decoration:none;
@@ -128,67 +38,50 @@ gr a:hover {
     color:#00E;
 }
 
+#grbox {
+    background:#F2F2F2; 
+    padding:20px 2em 20px 2em; 
+    text-align:center; 
+    margin: 10px 0px 10px 0px; 
+    font-weight:normal;
+    line-height:1.4em;
+}
+
 tt {
     font-family:'Lucida Console', monospace;
 }
 
-menubar {
+li {
+    list-style-type: none;
+}
+
+table {
     font-family:inherit;
-    font-size:1em;
-    height: 25px;
-    line-height:25px;
-    background:#666;
-    /* background:#555; */
-    color:#fff;
-    position:fixed;
-    padding-left:0em;
-    width:100%;
+    font-size:inherit;
+    border-collapse: collapse;
+    line-height:1.4em;
+    border-spacing:2em;
+    margin: 0 auto 0 auto;
 }
 
-menubar a {
-    text-decoration:none; color:#fff;
+th {
+    border-bottom: 1px solid #cecfd5;
+    padding: 0 1em .3em 1em;
+    font-weight:normal;
 }
 
-menubar a:hover {
-    color:#fff;
+td {
+    padding: 0 1em 0 1em;
 }
 
-menubar #menu-container ul {
-    width:100%;
-    margin:auto;
-    display:table;
+tbody:before {
+    content: '';
+    display: block;
+    height: 1em;
 }
 
-menubar #menu-container ul li {
-    display: table-cell;
-    /*width: 20%;  /* (100 / numItems)% */
-    white-space: nowrap;
-    /*text-align:center;*/
-}
 
-content-container
-{
-    width: 100%;
-    background: #fff;
-    margin: 0 0 10px 0;
-    overflow: hidden;
-    font-size:1em;
-}
-
-#content
-{
-    float: right;
-    width: 100%;
-    padding: 0px 0;
-    margin: 0 0 20 0px;
-
-}
-
-#content p {
-    color: #555;
-    margin: 0 0 15px 0;
-    line-height:1.6em;
-}
+/* headers */
 
 h1 {
     font-family:inherit;
@@ -236,53 +129,45 @@ h3 {
     margin: 1.9em 0 1em 0;
 }
 
-#grbox {
-    background:#F2F2F2; 
-    padding:20px 2em 20px 2em; 
-    text-align:center; 
-    margin: 10px 0px 10px 0px; 
-    font-weight:normal;
-    line-height:1.4em;
+/* main content management */
+
+body {
+    background:fff;
+    font-family: Sans-Serif;
+    height:100%;
+    font-size:.875em;
 }
 
-table {
-    font-family:inherit;
-    font-size:inherit;
-    border-collapse: collapse;
-    line-height:1.4em;
-    border-spacing:2em;
-    margin: 0 auto 0 auto;
+.container {
+    margin: 0 auto;
+    width: 600px;
+    background: #fff;
+    /* -mox-box-shadow: 0 0 5px #DDDDD0; */
+    /* -webkit-box-shadow: 0 0 5px #DDDDD0; */
+    /* box-shadow: 0 0 5px #EEEEE0; */
+    padding: 0 20px 0px 20px;
+    min-height:100%;
 }
 
-th {
-    border-bottom: 1px solid #cecfd5;
-    padding: 0 1em .3em 1em;
-    font-weight:normal;
+.content p {
+    color: #555;
+    margin: 0 0 15px 0;
+    line-height:1.6em;
 }
 
-td {
-    padding: 0 1em 0 1em;
-}
-
-tbody:before {
-    content: '';
-    display: block;
-    height: 1em;
-}
-
-#content ul {
+.content ul {
     list-style-position: outside;
 }
 
-#content ul li {
+.content ul li {
     margin: 0 0 15px 0;
     line-height:1.4em;
 }
 
-#content #bulletpoints ul {
+.content .bulletpoints ul {
     list-style-position: outside;  color:#555;
 }
-#content #bulletpoints ul li {
+.content .bulletpoints ul li {
     color: #555;
     margin: 0 0 15px 0;
     line-height:1.3em;
@@ -290,6 +175,138 @@ tbody:before {
     margin-left:20px;
 }
 
+.content-container
+{
+    width: 100%;
+    background: #fff;
+    /* margin: 0 0 10px 0; */
+    overflow: hidden;
+    font-size:1em;
+}
+
+.content
+{
+    float: right;
+    width: 100%;
+    padding: 0px 0;
+    /* margin: 0 0 20 0px; */
+}
+
+/* .photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+} */
+
+/* menu management */
+
+#menu-container {
+    margin: 0 auto;
+    width: 600px;
+    font-size:1em;
+}
+
+menubar {
+    font-family:inherit;
+    font-size:1em;
+    height: 25px;
+    line-height:25px;
+    background:#666;
+    /* background:#555; */
+    color:#fff;
+    position:fixed;
+    padding-left:0em;
+    width:100%;
+}
+
+menubar a {
+    text-decoration:none; color:#fff;
+}
+
+menubar a:hover {
+    color:#fff;
+}
+
+menubar #menu-container ul {
+    width:100%;
+    margin:auto;
+    display:table;
+}
+
+menubar #menu-container ul li {
+    display: table-cell;
+    /*width: 20%;  /* (100 / numItems)% */
+    white-space: nowrap;
+    /*text-align:center;*/
+}
+
+/* author info */
+
+/* how author name is shown */
+authorname {
+    font-family:inherit;
+    font-weight:normal;
+    font-size:1.5em; 
+    color:#555; 
+    font-variant:normal;
+    /* margin: 40px 0 5px 0; */
+    padding-top: 20px;
+    /* padding-top: 20px; */
+    /* padding-bottom: 5px; */
+}
+
+.author__container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 70px;
+    margin-bottom: 40px; 
+}
+
+/* .container {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 70px; 
+    margin-bottom: 25px; 
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; 
+    }
+} */
+
+.author__icon {
+    margin-right: 10px;
+}
+
+/* .author__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+} */
+
+.author__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* justify-content: flex-end; /* Aligns content to the bottom */
+}
+
+.author__avatar {
+    display: flex; 
+    flex-direction: column;
+    align-items: start; 
+    /* vertical-align: top;  */
+    width: 175px;
+    height: 175px;
+    border-radius: 50%; /* This creates the circular shape */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border: 2px solid #fff; /* Optional: Adds a border around the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+}
+
+
+/* Tabs */
 tabheader {
     display: flex;
     justify-content: space-between; /* Aligns items to the edges and spaces them out */
@@ -326,16 +343,44 @@ tabheader {
     border: none;
   } 
 
-  .tile {
-    width: 200px; /* Initial width */
-    height: 200px; /* Initial height */
+
+  /* Tiles */
+.tile {
+    width: 100%; /* Initial width */
+    height: 50px; /* Initial height, enough for the title */
     border: 1px solid #ccc;
-    margin: 10px;
-    transition: all 0.3s ease; /* Smooth transition for expanding */
+    margin-bottom:10px;
+    overflow: hidden; /* Hide the extra content initially */
+    transition: all 3s ease; /* Smooth transition for expanding */
+    cursor: pointer; /* Optional: changes the mouse cursor on hover */
 }
 
 .tile.expanded {
-    width: 400px; /* Expanded width */
-    height: 400px; /* Expanded height */
-    /* Add more styles for expanded tile if needed */
+    /* No fixed height here, so it can grow with content */
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-bottom:10px;
+    transition: all 3s ease; /* Smooth transition for expanding */
+    overflow: visible; /* Let the expanded content define the height */
+}
+
+.tile-title {
+    /* Styling for the title */
+    font-weight: bold;
+}
+
+.tile-content {
+    /* Styling for the additional content */
+    display: none; /* Hide initially */
+}
+
+.tile.expanded .tile-content {
+    display: block; /* Show when the tile is expanded */
+}
+
+.tile-content p {
+    color: #555;
+    margin: 0 0 15px 0;
+    line-height:1.6em;
 }
